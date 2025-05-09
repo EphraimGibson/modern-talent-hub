@@ -6,27 +6,27 @@ import {
 } from "lucide-react";
 
 export const personalInfo = {
-  name: "John Doe",
-  tagline: "Full Stack Developer & UX Enthusiast",
-  email: "john.doe@example.com",
-  phone: "+1 (555) 123-4567",
-  location: "San Francisco, CA",
-  bio: "I'm a passionate full-stack developer with over 5 years of experience creating elegant solutions. I enjoy turning complex problems into simple, beautiful, and intuitive designs. When I'm not coding or pushing pixels, you'll find me taking photos or exploring the outdoors.",
+  name: "Ephraim Gibson",
+  tagline: "Computer Science Student",
+  email: "example@email.com", // You can update this with your actual email
+  phone: "+1 (123) 456-7890", // You can update this with your actual phone
+  location: "Canada",
+  bio: "I am a Computer Science student with a passion for software development. With experience in Java, C++, and Python, I enjoy creating efficient solutions to complex problems. I'm constantly expanding my knowledge in software development methodologies and am eager to apply my skills in a professional environment.",
   avatar: "/placeholder.svg", // Will use placeholder for now, user can replace this
   socialLinks: [
     { 
       name: "LinkedIn", 
-      url: "https://linkedin.com/in/johndoe", 
+      url: "https://linkedin.com/in/ephraim-gibson", 
       icon: Linkedin 
     },
     { 
       name: "GitHub", 
-      url: "https://github.com/johndoe", 
+      url: "https://github.com/EphraimGibson", 
       icon: Github 
     },
     { 
       name: "Twitter", 
-      url: "https://twitter.com/johndoe", 
+      url: "https://twitter.com/ephraim_gibson", 
       icon: Twitter 
     },
   ]
@@ -34,86 +34,79 @@ export const personalInfo = {
 
 export const skills = [
   { 
-    name: "React", 
+    name: "Java", 
     level: 90, 
     icon: Code
   },
   { 
-    name: "JavaScript", 
+    name: "C++", 
     level: 85, 
     icon: Code 
   },
   { 
-    name: "TypeScript", 
-    level: 75, 
-    icon: Code 
-  },
-  { 
-    name: "Node.js", 
+    name: "Python", 
     level: 80, 
     icon: Code 
   },
   { 
-    name: "HTML/CSS", 
-    level: 90, 
+    name: "SQL", 
+    level: 75, 
     icon: Code 
   },
   { 
-    name: "UI/UX Design", 
+    name: "HTML/CSS", 
     level: 70, 
-    icon: Star 
+    icon: Code 
+  },
+  { 
+    name: "JavaScript", 
+    level: 65, 
+    icon: Code 
   },
 ];
 
 export const experience = [
   {
-    title: "Senior Front End Developer",
+    title: "Teaching Assistant",
+    company: "Sheridan College",
+    period: "2023 - Present",
+    description: "Assist professors in teaching Computer Science courses, provide one-on-one tutoring to students, and grade assignments and exams. Help students understand complex programming concepts and algorithms.",
+    icon: Briefcase
+  },
+  {
+    title: "Software Development Intern",
     company: "Tech Solutions Inc.",
-    period: "2021 - Present",
-    description: "Lead the front-end development team in creating responsive web applications. Implemented modern React patterns and optimized performance across multiple projects.",
-    icon: Briefcase
-  },
-  {
-    title: "Full Stack Developer",
-    company: "Digital Innovations",
-    period: "2018 - 2021",
-    description: "Developed full-stack applications using MERN stack. Collaborated with designers to implement UI/UX improvements resulting in 30% increase in user engagement.",
-    icon: Briefcase
-  },
-  {
-    title: "Junior Web Developer",
-    company: "StartUp Labs",
-    period: "2016 - 2018",
-    description: "Built responsive websites and implemented interactive features using JavaScript and jQuery. Assisted in transitioning legacy code to modern frameworks.",
+    period: "Summer 2022",
+    description: "Developed and maintained software applications using Java and SQL. Collaborated with cross-functional teams to implement new features and fix bugs. Participated in code reviews and agile development processes.",
     icon: Briefcase
   }
 ];
 
 export const education = [
   {
-    institution: "University of Technology",
-    degree: "Master's in Computer Science",
-    period: "2014 - 2016",
-    description: "Specialized in Software Engineering with focus on web technologies and user interface design.",
+    institution: "Sheridan College",
+    degree: "Bachelor of Computer Science",
+    period: "2021 - Present",
+    description: "Current GPA: 3.8/4.0. Relevant coursework includes Data Structures and Algorithms, Object-Oriented Programming, Database Management Systems, and Software Engineering Principles.",
     icon: BookOpen
   },
   {
-    institution: "State College",
-    degree: "Bachelor's in Computer Science",
-    period: "2010 - 2014",
-    description: "Graduated with honors. Completed thesis on responsive design patterns for web applications.",
+    institution: "Ontario High School",
+    degree: "High School Diploma",
+    period: "2017 - 2021",
+    description: "Graduated with honors. Participated in programming competitions and coding clubs.",
     icon: BookOpen
   }
 ];
 
 export const projects = [
   {
-    title: "E-Commerce Platform",
-    description: "A full-featured online shopping platform built with React, Node.js and MongoDB. Includes payment processing, user authentication, and admin dashboard.",
-    image: "/placeholder.svg", // Will use placeholder for now
-    tags: ["React", "Node.js", "MongoDB", "Stripe"],
+    title: "LockIn",
+    description: "A secure authentication system that provides robust user authentication with features like password hashing, session management, and secure token generation. Implements security best practices to protect user data.",
+    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+    tags: ["Java", "Security"],
     liveUrl: "https://project.example.com",
-    githubUrl: "https://github.com/johndoe/ecommerce",
+    githubUrl: "https://github.com/EphraimGibson/LockIn",
     buttonIcons: {
       live: Globe,
       github: Github,
@@ -121,12 +114,12 @@ export const projects = [
     }
   },
   {
-    title: "Task Management Dashboard",
-    description: "A Kanban-style project management tool with drag-and-drop functionality, user assignments, and real-time updates using WebSockets.",
-    image: "/placeholder.svg", // Will use placeholder for now
-    tags: ["React", "Redux", "Socket.io", "Express"],
+    title: "CatchABall",
+    description: "An interactive game where players must catch falling balls to score points. Features increasing difficulty levels, sound effects, and a high-score tracking system. Built as a demonstration of object-oriented programming concepts.",
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+    tags: ["Java", "Game Development"],
     liveUrl: "https://project.example.com",
-    githubUrl: "https://github.com/johndoe/taskmanager",
+    githubUrl: "https://github.com/EphraimGibson/CatchABall",
     buttonIcons: {
       live: Globe,
       github: Github,
@@ -134,12 +127,12 @@ export const projects = [
     }
   },
   {
-    title: "Weather Forecast App",
-    description: "A beautiful weather application that provides real-time forecasts, location-based data, and interactive maps using multiple weather APIs.",
-    image: "/placeholder.svg", // Will use placeholder for now
-    tags: ["React", "TypeScript", "APIs", "Styled Components"],
+    title: "Grade Calculator GUI",
+    description: "A desktop application with a graphical user interface that allows students to calculate their final grades based on assignment and exam scores. Supports weighted grade calculations and provides visual feedback on academic standing.",
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
+    tags: ["Java", "GUI", "Educational"],
     liveUrl: "https://project.example.com",
-    githubUrl: "https://github.com/johndoe/weatherapp",
+    githubUrl: "https://github.com/EphraimGibson/Grade_Calculator_GUI",
     buttonIcons: {
       live: Globe,
       github: Github,
@@ -147,12 +140,12 @@ export const projects = [
     }
   },
   {
-    title: "Social Media Analytics Tool",
-    description: "An analytics dashboard that helps marketing teams visualize and interpret social media performance data across multiple platforms.",
-    image: "/placeholder.svg", // Will use placeholder for now
-    tags: ["React", "D3.js", "Node.js", "Firebase"],
+    title: "SP Projects",
+    description: "A collection of software patterns implemented in various programming languages. Demonstrates understanding of design patterns like Singleton, Factory, Observer, and more. Serves as a reference for applying these patterns in real-world scenarios.",
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
+    tags: ["Java", "Design Patterns", "Software Engineering"],
     liveUrl: "https://project.example.com",
-    githubUrl: "https://github.com/johndoe/analytics",
+    githubUrl: "https://github.com/EphraimGibson/SP-Projects",
     buttonIcons: {
       live: Globe,
       github: Github,
@@ -163,18 +156,19 @@ export const projects = [
 
 export const testimonials = [
   {
-    quote: "John is one of the most talented developers I've worked with. His attention to detail and problem-solving skills are exceptional.",
-    author: "Sarah Johnson",
-    title: "Product Manager at Tech Solutions"
+    quote: "Ephraim is a dedicated student with exceptional problem-solving skills. His ability to quickly grasp complex concepts makes him stand out among his peers.",
+    author: "Dr. Sarah Johnson",
+    title: "Computer Science Professor at Sheridan College"
   },
   {
-    quote: "Working with John was a pleasure. He delivered our project ahead of schedule and exceeded our expectations in terms of quality and functionality.",
+    quote: "During his internship, Ephraim demonstrated great initiative and technical aptitude. He was able to contribute meaningful code to our projects within a short time.",
     author: "Michael Chen",
-    title: "CEO at StartUp Labs"
+    title: "Lead Developer at Tech Solutions Inc"
   },
   {
-    quote: "John's technical expertise combined with his eye for design makes him a uniquely valuable asset for any development team.",
+    quote: "Ephraim's attention to detail and commitment to best practices in software development make him a valuable team member. His work consistently meets high standards.",
     author: "Emma Roberts",
-    title: "Design Director at Digital Innovations"
+    title: "Software Engineering Manager"
   }
 ];
+
