@@ -88,7 +88,7 @@ export const education = [
 export const projects = [
   {
     title: "Task Management Application",
-    description: "A cross-platform mobile application for Android and iOS designed to manage daily tasks efficiently. It features a countdown timer, an intelligent algorithm that prioritizes tasks, and recommends an ideal task list for each day. The app includes user authentication and ensures that user data is securely stored and synced across multiple devices.",
+    description: "A cross-platform mobile application for Android and iOS designed to manage daily tasks efficiently. It features a countdown timer, an intelligent algorithm that prioritizes tasks, and recommends an ideal task list for each day. The app includes user authentication and API security using JWT tokens for access and refresh tokens, ensuring that user data is securely stored and synced across multiple devices.",
     image: "/placeholder.svg", // Will use placeholder for now
     tags: ["React Native", "Express", "Node.js", "Security", "PostgreSQL", "Docker", "JavaScript", "REST API", "APIs"],
     liveUrl: "https://project.example.com",
