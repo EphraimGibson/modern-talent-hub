@@ -12,7 +12,7 @@ export const personalInfo = {
   phone: "+37062132945",
   location: "Vilnius, Lithuania",
   bio: "I am a driven Computer Science student, working towards becoming a full-stack developer. I enjoy creating efficient solutions to complex problems and have hands-on experience with Java, C++, and React. I'm always learning and improving my skills, and my strong dedication to growth helps me adapt quickly and contribute value to any team.",
-  avatar: "/picture.svg", 
+  avatar: "/picture.png", 
   socialLinks: [
     { 
       name: "LinkedIn", 
