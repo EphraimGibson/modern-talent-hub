@@ -6,27 +6,27 @@ import {
 } from "lucide-react";
 
 export const personalInfo = {
-  name: "John Doe",
-  tagline: "Full Stack Developer & UX Enthusiast",
-  email: "john.doe@example.com",
-  phone: "+1 (555) 123-4567",
-  location: "San Francisco, CA",
-  bio: "I'm a passionate full-stack developer with over 5 years of experience creating elegant solutions. I enjoy turning complex problems into simple, beautiful, and intuitive designs. When I'm not coding or pushing pixels, you'll find me taking photos or exploring the outdoors.",
-  avatar: "/placeholder.svg", // Will use placeholder for now, user can replace this
+  name: "Ephraim Gibson",
+  tagline: "Computer Science Student",
+  email: "mrgibs97@gmail.com",
+  phone: "+37062132945",
+  location: "Vilnius, Lithuania",
+  bio: "I am a driven Computer Science student, working towards becoming a full-stack developer. I enjoy creating efficient solutions to complex problems and have hands-on experience with Java, C++, and React. I'm always learning and improving my skills, and my strong dedication to growth helps me adapt quickly and contribute value to any team.",
+  avatar: "/picture.svg", 
   socialLinks: [
     { 
       name: "LinkedIn", 
-      url: "https://linkedin.com/in/johndoe", 
+      url: "https://linkedin.com/in/ephraimgibson", 
       icon: Linkedin 
     },
     { 
       name: "GitHub", 
-      url: "https://github.com/johndoe", 
+      url: "https://github.com/EphraimGibson", 
       icon: Github 
     },
     { 
       name: "Twitter", 
-      url: "https://twitter.com/johndoe", 
+      url: "https://x.com/90s_remy", 
       icon: Twitter 
     },
   ]
@@ -35,85 +35,64 @@ export const personalInfo = {
 export const skills = [
   { 
     name: "React", 
-    level: 90, 
+    level: 70, 
     icon: Code
   },
   { 
     name: "JavaScript", 
-    level: 85, 
+    level: 75, 
     icon: Code 
   },
   { 
-    name: "TypeScript", 
+    name: "C++", 
     level: 75, 
     icon: Code 
   },
   { 
     name: "Node.js", 
-    level: 80, 
-    icon: Code 
-  },
-  { 
-    name: "HTML/CSS", 
     level: 90, 
     icon: Code 
   },
   { 
-    name: "UI/UX Design", 
-    level: 70, 
+    name: "HTML/CSS", 
+    level: 85, 
+    icon: Code 
+  },
+  { 
+    name: "Java", 
+    level: 90, 
     icon: Star 
   },
 ];
 
 export const experience = [
   {
-    title: "Senior Front End Developer",
-    company: "Tech Solutions Inc.",
-    period: "2021 - Present",
-    description: "Lead the front-end development team in creating responsive web applications. Implemented modern React patterns and optimized performance across multiple projects.",
-    icon: Briefcase
-  },
-  {
-    title: "Full Stack Developer",
-    company: "Digital Innovations",
-    period: "2018 - 2021",
-    description: "Developed full-stack applications using MERN stack. Collaborated with designers to implement UI/UX improvements resulting in 30% increase in user engagement.",
-    icon: Briefcase
-  },
-  {
-    title: "Junior Web Developer",
-    company: "StartUp Labs",
-    period: "2016 - 2018",
-    description: "Built responsive websites and implemented interactive features using JavaScript and jQuery. Assisted in transitioning legacy code to modern frameworks.",
+    title: "Customer service representative ",
+    company: "Teleperformance LT",
+    period: "2024 - 2025",
+    description: "Delivered effective solutions for technical issues on the Booking.com Extranet platform, handled special requests, and efficiently resolved host complaints.",
     icon: Briefcase
   }
 ];
 
 export const education = [
   {
-    institution: "University of Technology",
-    degree: "Master's in Computer Science",
-    period: "2014 - 2016",
-    description: "Specialized in Software Engineering with focus on web technologies and user interface design.",
-    icon: BookOpen
-  },
-  {
-    institution: "State College",
+    institution: "Vilniaus Verslo Kolegija",
     degree: "Bachelor's in Computer Science",
-    period: "2010 - 2014",
-    description: "Graduated with honors. Completed thesis on responsive design patterns for web applications.",
+    period: "2023 - 2026",
+    description: "Specialized in Software Engineering with focus on internet technologies and programming.",
     icon: BookOpen
   }
 ];
 
 export const projects = [
   {
-    title: "E-Commerce Platform",
-    description: "A full-featured online shopping platform built with React, Node.js and MongoDB. Includes payment processing, user authentication, and admin dashboard.",
+    title: "Task Management Application",
+    description: "A cross-platform mobile application for Android and iOS designed to manage daily tasks efficiently. It features a countdown timer, an intelligent algorithm that prioritizes tasks, and recommends an ideal task list for each day. The app includes user authentication and ensures that user data is securely stored and synced across multiple devices.",
     image: "/placeholder.svg", // Will use placeholder for now
-    tags: ["React", "Node.js", "MongoDB", "Stripe"],
+    tags: ["React Native", "Express", "Node.js", "Security", "PostgreSQL", "Docker", "JavaScript", "REST API", "APIs"],
     liveUrl: "https://project.example.com",
-    githubUrl: "https://github.com/johndoe/ecommerce",
+    githubUrl: "https://github.com/EphraimGibson/LockIn",
     buttonIcons: {
       live: Globe,
       github: Github,
@@ -121,12 +100,12 @@ export const projects = [
     }
   },
   {
-    title: "Task Management Dashboard",
-    description: "A Kanban-style project management tool with drag-and-drop functionality, user assignments, and real-time updates using WebSockets.",
+    title: "Grade Calculator App",
+    description: "A Windows Forms desktop application built with C++/CLR under the .NET Framework. Designed to streamline student grade management, it allows users to calculate final grades based on assignment and exam scores, supports weighted calculations, and provides visual feedback on academic standing. The application features a smart algorithm that can compute grades using either the median or the average, allowing for easy switching between calculation methods. It also includes a built-in text editor for writing, opening, and saving documents, along with an MSI setup file for easy installation.",
     image: "/placeholder.svg", // Will use placeholder for now
-    tags: ["React", "Redux", "Socket.io", "Express"],
+    tags: ["C++/CLR", ".Net Framework"],
     liveUrl: "https://project.example.com",
-    githubUrl: "https://github.com/johndoe/taskmanager",
+    githubUrl: "https://github.com/EphraimGibson/Grade_Calculator_GUI",
     buttonIcons: {
       live: Globe,
       github: Github,
@@ -134,25 +113,12 @@ export const projects = [
     }
   },
   {
-    title: "Weather Forecast App",
-    description: "A beautiful weather application that provides real-time forecasts, location-based data, and interactive maps using multiple weather APIs.",
+    title: "Tap & Dash Game",
+    description: "An interactive game where players catch disappearing balls to score points, featuring increasing difficulty, sound effects, and a high-score tracker. Built with MIT App Inventor to demonstrate multimedia capabilities on smart devices, the game includes user authentication and cross-device data persistence, showcasing practical knowledge of MySQL and API integration. PHP scripts were used to connect the app with the database, handling data exchange between the client and server.",
     image: "/placeholder.svg", // Will use placeholder for now
-    tags: ["React", "TypeScript", "APIs", "Styled Components"],
+    tags: ["Security", "PHP", "APIs", "MySQL"],
     liveUrl: "https://project.example.com",
-    githubUrl: "https://github.com/johndoe/weatherapp",
-    buttonIcons: {
-      live: Globe,
-      github: Github,
-      details: ExternalLink
-    }
-  },
-  {
-    title: "Social Media Analytics Tool",
-    description: "An analytics dashboard that helps marketing teams visualize and interpret social media performance data across multiple platforms.",
-    image: "/placeholder.svg", // Will use placeholder for now
-    tags: ["React", "D3.js", "Node.js", "Firebase"],
-    liveUrl: "https://project.example.com",
-    githubUrl: "https://github.com/johndoe/analytics",
+    githubUrl: "https://github.com/EphraimGibson/CatchABall",
     buttonIcons: {
       live: Globe,
       github: Github,
@@ -163,18 +129,13 @@ export const projects = [
 
 export const testimonials = [
   {
-    quote: "John is one of the most talented developers I've worked with. His attention to detail and problem-solving skills are exceptional.",
-    author: "Sarah Johnson",
-    title: "Product Manager at Tech Solutions"
+    quote: "Worked with Ephraim for 11 months. He is motivated, fast learner and is quick to absorb all technical information needed to assist clients. Actively participated in teams meetings, outings and celebrations, was a valuable team member. Let with great results and performed till the last day with high regard to team, clients and position.",
+    author: "Daiva Marčiukaitytė",
+    title: "Team Manager at Teleperformance"
   },
   {
-    quote: "Working with John was a pleasure. He delivered our project ahead of schedule and exceeded our expectations in terms of quality and functionality.",
-    author: "Michael Chen",
-    title: "CEO at StartUp Labs"
-  },
-  {
-    quote: "John's technical expertise combined with his eye for design makes him a uniquely valuable asset for any development team.",
-    author: "Emma Roberts",
-    title: "Design Director at Digital Innovations"
+    quote: "Collaborating with Ephraim was a great experience. He completed his part of the project ahead of schedule and surpassed our expectations in both quality and functionality.",
+    author: "Fady Dkhil ",
+    title: "Teammate at VVK"
   }
 ];

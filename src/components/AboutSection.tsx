@@ -14,13 +14,13 @@ const AboutSection = () => {
             <h3 className="text-2xl font-semibold mb-4 text-navy">Who Am I?</h3>
             <div className="space-y-4">
               <p className="text-gray-700 leading-relaxed">
-                I'm a passionate developer with a strong focus on creating clean, efficient, and user-friendly web applications. My journey in tech started over 5 years ago, and since then, I've been constantly learning and improving my skills.
+                I'm a passionate developer with a strong focus on building clean, efficient, and user-friendly web applications. My journey in tech began two years ago when I joined the 42 program, where we coded in C. It was there that I discovered my love for programming and the thrill of problem-solving through hands-on challenges. I later continued my studies in college, building a solid foundation in computer science using C++, and have been continuously learning and growing ever since.
+                </p>
+              <p className="text-gray-700 leading-relaxed">
+              I enjoy solving problems and turning complex ideas into simple, beautiful digital experiences. My skills span both front-end and back-end technologies, and I’m especially interested in developing scalable backend systems that implement smart algorithms and support smooth, seamless user experiences.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                As a full-stack developer, I enjoy tackling complex problems and turning them into simple and beautiful solutions. My expertise spans front-end and back-end technologies, with a special interest in creating responsive interfaces and optimized user experiences.
-              </p>
-              <p className="text-gray-700 leading-relaxed">
-                When I'm not coding, you can find me exploring hiking trails, experimenting with photography, or attending tech meetups to stay connected with the community.
+              When I'm not coding, you’ll find me engaging in different kinds of sports to break a sweat and get my heart racing, attending tech meetups, or traveling to explore places I’ve never been before.
               </p>
             </div>
             
@@ -80,9 +80,8 @@ const AboutSection = () => {
             <div className="grid grid-cols-2 gap-4">
               {[
                 { name: "Web Development", icon: "💻" },
-                { name: "UX Design", icon: "🎨" },
-                { name: "Photography", icon: "📷" },
-                { name: "Hiking", icon: "🥾" },
+                { name: "Mobile Development", icon: "📱" },
+                { name: "Sports", icon: "🏀" },
                 { name: "Reading", icon: "📚" },
                 { name: "Travel", icon: "✈️" },
               ].map((interest, index) => (
@@ -99,8 +98,7 @@ const AboutSection = () => {
             <div className="mt-8 bg-gradient-to-r from-accent-blue/20 to-accent-purple/20 p-5 rounded-lg">
               <h4 className="font-semibold text-navy mb-2">Fun Fact</h4>
               <p className="text-gray-700">
-                I once coded an entire project during a 12-hour flight without internet—relying only on documentation I had downloaded beforehand!
-              </p>
+                My motto for the past year has been: 'One LeetCode a day keeps the doctor away,' and I try to stick to it.              </p>
             </div>
           </div>
         </div>

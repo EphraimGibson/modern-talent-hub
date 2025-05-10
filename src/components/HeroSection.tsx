@@ -66,7 +66,7 @@ const HeroSection = () => {
             </div>
             <div className="absolute -bottom-4 -right-4 bg-white px-4 py-2 rounded-lg shadow-lg">
               <span className="font-semibold text-accent-purple">
-                5+ Years Experience
+                2+ Years Experience
               </span>
             </div>
           </div>
