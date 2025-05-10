@@ -327,7 +327,7 @@ const ContactSection = () => {
                     </svg>
                   </div>
                   <h4 className="font-semibold text-navy">Website</h4>
-                  <p className="text-accent-purple">www.yourwebsite.com</p>
+                  <p className="text-accent-purple">ephraimgibson.pro</p>
                 </CardContent>
               </Card>
             </div>
