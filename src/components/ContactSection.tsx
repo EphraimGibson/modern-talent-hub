@@ -6,42 +6,91 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import * as z from "zod";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+
+// Form validation schema
+const formSchema = z.object({
+  name: z.string().min(2, { message: "Name must be at least 2 characters." }),
+  email: z.string().email({ message: "Please enter a valid email address." }),
+  subject: z.string().min(3, { message: "Subject must be at least 3 characters." }),
+  message: z.string().min(10, { message: "Message must be at least 10 characters." }),
+});
 
 const ContactSection = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
+  // Initialize form with react-hook-form and zod validation
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    },
+  });
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      // Step 1: Store submission in the database
+      const { error: dbError } = await supabase
+        .from("contact_submissions")
+        .insert([values]);
+
+      if (dbError) {
+        console.error("Database submission error:", dbError);
+        throw new Error("Failed to save your message. Please try again.");
+      }
+
+      // Step 2: Send confirmation email
+      const response = await fetch(
+        "https://ficyicxwcshsfdbzmedx.supabase.co/functions/v1/send-confirmation",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(values),
+        }
+      );
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        console.error("Email sending error:", errorData);
+        // We don't throw here as the submission is already saved
+      }
+
+      // Success notification
       toast({
         title: "Message sent!",
         description: "Thanks for reaching out. I'll get back to you soon.",
       });
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
+
+      // Reset form
+      form.reset();
+    } catch (error: any) {
+      toast({
+        title: "Something went wrong!",
+        description: error.message || "Failed to send your message. Please try again.",
+        variant: "destructive",
       });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   return (
@@ -52,78 +101,91 @@ const ContactSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12">
           <div className="animate-fade-in">
             <h3 className="text-2xl font-semibold mb-6 text-navy">Send Me a Message</h3>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                    Your Name
-                  </label>
-                  <Input
-                    id="name"
+            <Form {...form}>
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <FormField
+                    control={form.control}
                     name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="bg-white"
-                    placeholder="John Doe"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-sm font-medium text-gray-700">Your Name</FormLabel>
+                        <FormControl>
+                          <Input 
+                            placeholder="John Doe" 
+                            className="bg-white" 
+                            {...field} 
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  
+                  <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-sm font-medium text-gray-700">Your Email</FormLabel>
+                        <FormControl>
+                          <Input 
+                            placeholder="john@example.com" 
+                            className="bg-white" 
+                            {...field} 
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
                   />
                 </div>
                 
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                    Your Email
-                  </label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="bg-white"
-                    placeholder="john@example.com"
-                  />
-                </div>
-              </div>
-              
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
-                  Subject
-                </label>
-                <Input
-                  id="subject"
+                <FormField
+                  control={form.control}
                   name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  required
-                  className="bg-white"
-                  placeholder="Project Inquiry"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-sm font-medium text-gray-700">Subject</FormLabel>
+                      <FormControl>
+                        <Input 
+                          placeholder="Project Inquiry" 
+                          className="bg-white" 
+                          {...field} 
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
                 />
-              </div>
-              
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                  Message
-                </label>
-                <Textarea
-                  id="message"
+                
+                <FormField
+                  control={form.control}
                   name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  className="resize-none h-40 bg-white"
-                  placeholder="Hello, I would like to talk about..."
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-sm font-medium text-gray-700">Message</FormLabel>
+                      <FormControl>
+                        <Textarea 
+                          placeholder="Hello, I would like to talk about..." 
+                          className="resize-none h-40 bg-white" 
+                          {...field} 
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
                 />
-              </div>
-              
-              <Button
-                type="submit"
-                className="bg-accent-purple hover:bg-accent-purple/90 w-full"
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? "Sending..." : "Send Message"}
-              </Button>
-            </form>
+                
+                <Button
+                  type="submit"
+                  className="bg-accent-purple hover:bg-accent-purple/90 w-full"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "Sending..." : "Send Message"}
+                </Button>
+              </form>
+            </Form>
           </div>
           
           <div className="animate-fade-in">
