@@ -23,7 +23,7 @@ const Footer = () => {
           
           <div className="text-center mb-6">
             <h3 className="text-xl font-bold mb-1">
-              {personalInfo.name}<span className="text-accent-purple">.</span>
+              {personalInfo.name}<span className="text-accent-purple"></span>
             </h3>
             <p className="text-gray-300">{personalInfo.tagline}</p>
           </div>
@@ -46,7 +46,7 @@ const Footer = () => {
           <div className="text-center text-gray-400 text-sm">
             <p>© {new Date().getFullYear()} All rights reserved.</p>
             <p className="mt-1">
-              Designed and developed with <span className="text-red-500">❤</span>
+              Designed and developed by <span className="text-red-500">Ephraim Gibson</span>
             </p>
           </div>
         </div>

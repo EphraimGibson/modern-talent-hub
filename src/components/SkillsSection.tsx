@@ -79,8 +79,8 @@ const SkillsSection = () => {
           
           <div className="flex flex-wrap justify-center gap-3">
             {[
-              "Git", "Docker", "AWS", "GraphQL", "Jest", "Figma", 
-              "MongoDB", "PostgreSQL", "Firebase", "Redux", "Next.js", "TailwindCSS"
+              "Git", "Docker", "AWS", "TypeScript", "Spring Boot", "Figma", 
+              "MongoDB", "PostgreSQL", "Firebase", "Redux", "RESTful API", "TailwindCSS"
             ].map((skill) => (
               <span 
                 key={skill}
