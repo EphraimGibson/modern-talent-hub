@@ -1,4 +1,3 @@
-
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { Resend } from "npm:resend@2.0.0";
 
@@ -39,6 +38,24 @@ serve(async (req) => {
             <p>${message}</p>
           </div>
           <p>Best regards,<br>Portfolio Team</p>
+        </div>
+      `,
+    });
+    
+    // Also send notification to yourself
+    await resend.emails.send({
+      from: "Portfolio Contact <onboarding@resend.dev>",
+      to: ["mrgibs97@gmail.com"], // Replace with your actual email
+      subject: `New Contact Form: ${subject}`,
+      html: `
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+          <h2 style="color: #6d28d9;">New contact form submission</h2>
+          <p><strong>From:</strong> ${name} (${email})</p>
+          <p><strong>Subject:</strong> ${subject}</p>
+          <p><strong>Message:</strong></p>
+          <div style="background-color: #f4f4f8; padding: 15px; border-left: 4px solid #6d28d9; margin: 20px 0;">
+            <p>${message}</p>
+          </div>
         </div>
       `,
     });
