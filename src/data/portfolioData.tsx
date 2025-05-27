@@ -91,7 +91,7 @@ export const projects = [
     description: "A cross-platform mobile application for Android and iOS designed to manage daily tasks efficiently. It features a countdown timer, an intelligent algorithm that prioritizes tasks, and recommends an ideal task list for each day. The app includes user authentication and API security using JWT tokens for access and refresh tokens, ensuring that user data is securely stored and synced across multiple devices.",
     image: "/lockinscreenshot.jpg", // Will use placeholder for now
     tags: ["React Native", "Express", "Node.js", "Security", "PostgreSQL", "Docker", "JavaScript", "REST API", "APIs"],
-    liveUrl: "https://project.example.com",
+    liveUrl: "https://vimeo.com/1087969240/ca3b33f3df?share=copy",
     githubUrl: "https://github.com/EphraimGibson/LockIn",
     buttonIcons: {
       live: Globe,
