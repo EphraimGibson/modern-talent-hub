@@ -14,7 +14,7 @@ const HeroSection = () => {
   return (
     <section 
       id="home" 
-      className="min-h-screen flex flex-col justify-center relative overflow-hidden bg-gradient-to-br from-white to-soft-purple pt-16"
+      className="min-h-screen flex flex-col justify-center relative overflow-hidden bg-gradient-to-br from-white to-soft-green pt-16"
     >
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(155,135,245,0.2)_0%,rgba(255,255,255,0)_50%)]"></div>
@@ -24,11 +24,11 @@ const HeroSection = () => {
       <div className="section-container z-10 flex flex-col md:flex-row items-center gap-8 md:gap-16">
         <div className="flex-1 animate-slide-from-left">
           <div className="mb-4">
-            <span className="inline-block px-3 py-1 text-xs font-semibold bg-soft-purple text-accent-purple rounded-full mb-2">
+            <span className="inline-block px-3 py-1 text-xs font-semibold bg-soft-green text-accent-green rounded-full mb-2">
               Welcome to my portfolio
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy mb-4">
-              Hi, I'm {personalInfo.name}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy mb-4 whitespace-nowrap">
+             {personalInfo.name}
             </h1>
             <h2 className="text-xl md:text-2xl font-medium text-gray-700 mb-6">
               {personalInfo.tagline}
@@ -40,14 +40,14 @@ const HeroSection = () => {
           
           <div className="flex flex-wrap gap-4">
             <Button 
-              className="bg-accent-purple hover:bg-accent-purple/90 text-white"
+              className="bg-accent-green hover:bg-accent-green/90 text-white"
               onClick={scrollToAbout}
             >
               Learn more
             </Button>
             <Button 
               variant="outline" 
-              className="border-accent-purple text-accent-purple hover:bg-accent-purple/10"
+              className="border-accent-green text-accent-green hover:bg-accent-green/10"
               asChild
             >
               <a href="#contact">Get in Touch</a>
@@ -65,7 +65,7 @@ const HeroSection = () => {
               />
             </div>
             <div className="absolute -bottom-4 -right-4 bg-white px-4 py-2 rounded-lg shadow-lg">
-              <span className="font-semibold text-accent-purple">
+              <span className="font-semibold text-accent-green">
                 2+ Years Experience
               </span>
             </div>

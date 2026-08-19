@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -25,7 +24,7 @@
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 251 80% 74%;
+    --accent: 142 76% 25%;
     --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
@@ -33,7 +32,7 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 251 80% 74%;
+    --ring: 142 76% 25%;
 
     --radius: 0.5rem;
   }
@@ -49,7 +48,12 @@
     scroll-behavior: smooth;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-heading font-semibold;
   }
 }
@@ -58,37 +62,37 @@
   .section-container {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20;
   }
-  
+
   .section-title {
     @apply text-3xl md:text-4xl font-bold mb-8 text-center relative;
   }
-  
+
   .section-title::after {
-    content: '';
+    content: "";
     @apply block h-1 w-20 bg-accent mt-2 mx-auto rounded-full;
   }
 
   .card-hover {
     @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-xl;
   }
-  
+
   .skill-bar {
     @apply h-2 w-full bg-soft-gray rounded-full overflow-hidden;
   }
-  
+
   .skill-progress {
     @apply h-full bg-accent rounded-full animate-progress-fill;
   }
 
   .timeline-item {
-    @apply relative pl-8 pb-12 border-l border-soft-purple;
+    @apply relative pl-8 pb-12 border-l border-soft-green;
   }
-  
+
   .timeline-item::before {
-    content: '';
+    content: "";
     @apply absolute left-[-8px] w-4 h-4 bg-accent rounded-full border-2 border-white;
   }
-  
+
   .timeline-item:last-child {
     @apply border-l-0;
   }

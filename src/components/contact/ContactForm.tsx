@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -70,7 +69,7 @@ const ContactForm = () => {
               "Content-Type": "application/json",
             },
             body: JSON.stringify(values),
-          }
+          },
         );
 
         if (!response.ok) {
@@ -197,7 +196,7 @@ const ContactForm = () => {
 
         <Button
           type="submit"
-          className="bg-accent-purple hover:bg-accent-purple/90 w-full"
+          className="bg-accent-green hover:bg-accent-green/90 w-full"
           disabled={isSubmitting}
         >
           {isSubmitting ? "Sending..." : "Send Message"}

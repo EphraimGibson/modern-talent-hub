@@ -7,11 +7,11 @@ import {
 
 export const personalInfo = {
   name: "Ephraim Gibson",
-  tagline: "Computer Science Student",
+  tagline: "Full-Stack Developer",
   email: "mrgibs97@gmail.com",
   phone: "+37062132945",
   location: "Vilnius, Lithuania",
-  bio: "I am a driven Computer Science student, working towards becoming a full-stack developer. I enjoy creating efficient solutions to complex problems and have hands-on experience with Java, C++, and React. I'm always learning and improving my skills, and my strong dedication to growth helps me adapt quickly and contribute value to any team.",
+  bio: "I'm a full-stack developer with deep expertise in Java and backend systems, paired with modern frontend development using React and TypeScript. I build efficient, reliable solutions end-to-end, from robust backend architecture and data modeling to responsive, well-tested user interfaces. I care about writing clean, maintainable code and delivering software that holds up in production. I bring dedication, adaptability, and a genuine drive to deliver value on every project I touch.",
   avatar: "/picture.png", 
   socialLinks: [
     { 

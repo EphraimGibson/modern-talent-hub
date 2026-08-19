@@ -31,8 +31,8 @@ const ExperienceSection = () => {
                     </div>
 
                     <div className="flex items-center my-2">
-                      <item.icon className="h-4 w-4 text-accent-purple mr-2" />
-                      <span className="text-accent-purple font-medium">
+                      <item.icon className="h-4 w-4 text-accent-green mr-2" />
+                      <span className="text-accent-green font-medium">
                         {item.company}
                       </span>
                     </div>
@@ -59,8 +59,8 @@ const ExperienceSection = () => {
                     </div>
 
                     <div className="flex items-center my-2">
-                      <item.icon className="h-4 w-4 text-accent-purple mr-2" />
-                      <span className="text-accent-purple font-medium">
+                      <item.icon className="h-4 w-4 text-accent-green mr-2" />
+                      <span className="text-accent-green font-medium">
                         {item.institution}
                       </span>
                     </div>
@@ -79,7 +79,7 @@ const ExperienceSection = () => {
             download
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center text-accent-purple hover:underline font-medium"
+            className="inline-flex items-center text-accent-green hover:underline font-medium"
           >
             Download my full resume
             <svg

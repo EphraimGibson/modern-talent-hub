@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -6,7 +5,7 @@ import { Button } from "@/components/ui/button";
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  
+
   const navItems = [
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
@@ -41,21 +40,19 @@ const Navbar = () => {
   };
 
   return (
-    <nav 
+    <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled 
-          ? "bg-white shadow-md py-2" 
-          : "bg-transparent py-4"
+        isScrolled ? "bg-white shadow-md py-2" : "bg-transparent py-4"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <div className="flex-shrink-0">
             <a href="#home" className="text-xl font-bold text-navy">
-              Portfolio<span className="text-accent-purple">.</span>
+              Portfolio<span className="text-accent-green">.</span>
             </a>
           </div>
-          
+
           {/* Desktop Menu */}
           <div className="hidden md:block">
             <div className="flex space-x-4">
@@ -68,9 +65,9 @@ const Navbar = () => {
                     scrollToSection(item.href);
                   }}
                   className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                    isScrolled 
-                      ? "text-navy hover:bg-soft-purple hover:text-accent-purple" 
-                      : "text-navy hover:bg-navy/10 hover:text-accent-purple"
+                    isScrolled
+                      ? "text-navy hover:bg-soft-green hover:text-accent-green"
+                      : "text-navy hover:bg-navy/10 hover:text-accent-green"
                   }`}
                 >
                   {item.name}
@@ -78,7 +75,7 @@ const Navbar = () => {
               ))}
             </div>
           </div>
-          
+
           {/* Mobile Menu Button */}
           <div className="md:hidden">
             <Button
@@ -96,7 +93,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      
+
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="md:hidden bg-white shadow-lg">
@@ -109,7 +106,7 @@ const Navbar = () => {
                   e.preventDefault();
                   scrollToSection(item.href);
                 }}
-                className="block px-3 py-2 text-base font-medium text-navy hover:bg-soft-purple hover:text-accent-purple rounded-md"
+                className="block px-3 py-2 text-base font-medium text-navy hover:bg-soft-green hover:text-accent-green rounded-md"
               >
                 {item.name}
               </a>

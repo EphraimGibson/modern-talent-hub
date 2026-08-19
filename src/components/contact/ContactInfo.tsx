@@ -1,4 +1,3 @@
-
 import { personalInfo } from "@/data/portfolioData";
 import ContactInfoCard from "./ContactInfoCard";
 import { Card } from "@/components/ui/card";
@@ -15,7 +14,7 @@ const ContactInfo = () => {
           icon={
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 text-accent-purple"
+              className="h-6 w-6 text-accent-green"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -32,7 +31,7 @@ const ContactInfo = () => {
           content={
             <a
               href={`mailto:${personalInfo.email}`}
-              className="text-accent-purple hover:underline"
+              className="text-accent-green hover:underline"
             >
               {personalInfo.email}
             </a>
@@ -43,7 +42,7 @@ const ContactInfo = () => {
           icon={
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 text-accent-purple"
+              className="h-6 w-6 text-accent-green"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -60,7 +59,7 @@ const ContactInfo = () => {
           content={
             <a
               href={`tel:${personalInfo.phone}`}
-              className="text-accent-purple hover:underline"
+              className="text-accent-green hover:underline"
             >
               {personalInfo.phone}
             </a>
@@ -71,7 +70,7 @@ const ContactInfo = () => {
           icon={
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 text-accent-purple"
+              className="h-6 w-6 text-accent-green"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -98,7 +97,7 @@ const ContactInfo = () => {
           icon={
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 text-accent-purple"
+              className="h-6 w-6 text-accent-green"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -112,7 +111,7 @@ const ContactInfo = () => {
             </svg>
           }
           title="Website"
-          content={<p className="text-accent-purple">ephraimgibson.pro</p>}
+          content={<p className="text-accent-green">ephraimgibson.pro</p>}
         />
       </div>
 
@@ -124,9 +123,9 @@ const ContactInfo = () => {
             href={social.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 rounded-md bg-white hover:bg-accent-purple/10 transition-colors border border-gray-200"
+            className="flex items-center gap-2 px-4 py-2 rounded-md bg-white hover:bg-accent-green/10 transition-colors border border-gray-200"
           >
-            <social.icon className="h-5 w-5 text-accent-purple" />
+            <social.icon className="h-5 w-5 text-accent-green" />
             <span>{social.name}</span>
           </a>
         ))}

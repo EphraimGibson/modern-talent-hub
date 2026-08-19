@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from "react";
 import { skills } from "@/data/portfolioData";
 import { Card, CardContent } from "@/components/ui/card";
@@ -15,7 +14,7 @@ const SkillsSection = () => {
           observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.2 },
     );
 
     if (sectionRef.current) {
@@ -33,37 +32,43 @@ const SkillsSection = () => {
     <section id="skills" className="bg-soft-gray/50 py-20" ref={sectionRef}>
       <div className="section-container">
         <h2 className="section-title">Skills & Expertise</h2>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
           {skills.map((skill, index) => {
             const delay = index * 0.1;
-            
+
             return (
-              <Card 
+              <Card
                 key={skill.name}
                 className={`overflow-hidden card-hover transition-all duration-500 ${
-                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                  isVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-8"
                 }`}
                 style={{ transitionDelay: `${delay}s` }}
               >
                 <CardContent className="p-6">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="bg-accent-purple/20 p-2 rounded-md">
-                      <skill.icon className="h-5 w-5 text-accent-purple" />
+                    <div className="bg-accent-green/20 p-2 rounded-md">
+                      <skill.icon className="h-5 w-5 text-accent-green" />
                     </div>
-                    <h3 className="font-semibold text-lg text-navy">{skill.name}</h3>
+                    <h3 className="font-semibold text-lg text-navy">
+                      {skill.name}
+                    </h3>
                   </div>
-                  
+
                   <div className="skill-bar">
-                    <div 
-                      className="skill-progress" 
-                      style={{ 
-                        "--progress-width": `${skill.level}%`,
-                        width: isVisible ? `${skill.level}%` : "0%"
-                      } as React.CSSProperties}
+                    <div
+                      className="skill-progress"
+                      style={
+                        {
+                          "--progress-width": `${skill.level}%`,
+                          width: isVisible ? `${skill.level}%` : "0%",
+                        } as React.CSSProperties
+                      }
                     ></div>
                   </div>
-                  
+
                   <div className="flex justify-between mt-2 text-sm text-gray-600">
                     <span>Proficiency</span>
                     <span>{skill.level}%</span>
@@ -73,18 +78,30 @@ const SkillsSection = () => {
             );
           })}
         </div>
-        
+
         <div className="mt-16 bg-white rounded-xl shadow-md p-8 animate-fade-in">
-          <h3 className="text-2xl font-semibold text-center mb-6 text-navy">Other Technical Skills</h3>
-          
+          <h3 className="text-2xl font-semibold text-center mb-6 text-navy">
+            Other Technical Skills
+          </h3>
+
           <div className="flex flex-wrap justify-center gap-3">
             {[
-              "Git", "Docker", "AWS", "TypeScript", "Spring Boot", "Figma", 
-              "MongoDB", "PostgreSQL", "Firebase", "Redux", "RESTful API", "TailwindCSS"
+              "Git",
+              "Docker",
+              "AWS",
+              "TypeScript",
+              "Spring Boot",
+              "Figma",
+              "MongoDB",
+              "PostgreSQL",
+              "Firebase",
+              "Redux",
+              "RESTful API",
+              "TailwindCSS",
             ].map((skill) => (
-              <span 
+              <span
                 key={skill}
-                className="px-4 py-2 bg-soft-purple rounded-full font-medium text-sm text-accent-purple"
+                className="px-4 py-2 bg-soft-green rounded-full font-medium text-sm text-accent-green"
               >
                 {skill}
               </span>
