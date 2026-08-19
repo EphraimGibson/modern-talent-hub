@@ -49,7 +49,7 @@ const ProjectsSection = () => {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-contain object-top transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
                   <div className="w-full">
@@ -90,21 +90,23 @@ const ProjectsSection = () => {
                   </a>
                 </Button>
 
-                <Button
-                  variant="outline"
-                  className="border-accent-green text-accent-green"
-                  asChild
-                >
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2"
+                {project.githubUrl && project.buttonIcons.github && (
+                  <Button
+                    variant="outline"
+                    className="border-accent-green text-accent-green"
+                    asChild
                   >
-                    <project.buttonIcons.github className="h-4 w-4" />
-                    <span>GitHub</span>
-                  </a>
-                </Button>
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2"
+                    >
+                      <project.buttonIcons.github className="h-4 w-4" />
+                      <span>GitHub</span>
+                    </a>
+                  </Button>
+                )}
               </CardFooter>
             </Card>
           ))}
