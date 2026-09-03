@@ -15,8 +15,7 @@ import {
 export const personalInfo = {
   name: "Ephraim Gibson",
   tagline: "Full-Stack Developer",
-  email: "mrgibs97@gmail.com",
-  phone: "+37062132945",
+  email: "gibsonephraim9@gmail.com",
   location: "Vilnius, Lithuania",
   bio: "I'm a full-stack developer with deep expertise in Java and backend systems, paired with modern frontend development using React and TypeScript. I build efficient, reliable solutions end-to-end, from robust backend architecture and data modeling to responsive, well-tested user interfaces. I care about writing clean, maintainable code and delivering software that holds up in production. I bring dedication, adaptability, and a genuine drive to deliver value on every project I touch.",
   avatar: "/picture.png",
@@ -30,11 +29,6 @@ export const personalInfo = {
       name: "GitHub",
       url: "https://github.com/EphraimGibson",
       icon: Github,
-    },
-    {
-      name: "Twitter",
-      url: "https://x.com/90s_remy",
-      icon: Twitter,
     },
   ],
 };
