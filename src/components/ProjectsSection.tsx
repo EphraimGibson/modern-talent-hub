@@ -17,7 +17,7 @@ const ProjectsSection = () => {
     : projects;
 
   return (
-    <section id="projects" className="bg-white py-20">
+    <section id="projects" className="section-pattern pattern-diagonal bg-soft-gray/50 py-20">
       <div className="section-container">
         <h2 className="section-title">My Projects</h2>
 
@@ -71,10 +71,10 @@ const ProjectsSection = () => {
               </div>
 
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-navy">
+                <h3 className="text-xl font-semibold mb-2 text-foreground">
                   {project.title}
                 </h3>
-                <p className="text-gray-600">{project.description}</p>
+                <p className="text-muted-foreground">{project.description}</p>
               </CardContent>
 
               <CardFooter className="px-6 pb-6 pt-0 flex gap-3">

@@ -5,7 +5,7 @@ import { Card } from "@/components/ui/card";
 const ContactInfo = () => {
   return (
     <div>
-      <h3 className="text-2xl font-semibold mb-6 text-navy">
+      <h3 className="text-2xl font-semibold mb-6 text-foreground">
         Contact Information
       </h3>
 
@@ -62,12 +62,12 @@ const ContactInfo = () => {
             </svg>
           }
           title="Location"
-          content={<p className="text-gray-700">{personalInfo.location}</p>}
+          content={<p className="text-muted-foreground">{personalInfo.location}</p>}
         />
 
       </div>
 
-      <h4 className="font-semibold text-navy mb-4">Connect With Me</h4>
+      <h4 className="font-semibold text-foreground mb-4">Connect With Me</h4>
       <div className="flex flex-wrap gap-3">
         {personalInfo.socialLinks.map((social) => (
           <a
@@ -75,7 +75,7 @@ const ContactInfo = () => {
             href={social.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 rounded-md bg-white hover:bg-accent-green/10 transition-colors border border-gray-200"
+            className="flex items-center gap-2 px-4 py-2 rounded-md bg-white/[0.03] hover:bg-accent-green/10 hover:border-accent-green/40 transition-colors border border-white/10"
           >
             <social.icon className="h-5 w-5 text-accent-green" />
             <span>{social.name}</span>

@@ -10,8 +10,8 @@ const ContactInfoCard = ({ icon, title, content }: ContactInfoCardProps) => {
   return (
     <Card>
       <CardContent className="flex flex-col items-center text-center p-6">
-        <div className="bg-accent-green/20 p-4 rounded-full mb-4">{icon}</div>
-        <h4 className="font-semibold text-navy">{title}</h4>
+        <div className="bg-accent-green/15 p-4 rounded-full mb-4">{icon}</div>
+        <h4 className="font-semibold text-foreground">{title}</h4>
         {content}
       </CardContent>
     </Card>

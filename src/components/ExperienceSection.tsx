@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 
 const ExperienceSection = () => {
   return (
-    <section id="experience" className="bg-soft-gray/50 py-20">
+    <section id="experience" className="section-pattern pattern-diagonal bg-soft-gray/50 py-20">
       <div className="section-container">
         <h2 className="section-title">Experience & Education</h2>
 
@@ -17,15 +17,15 @@ const ExperienceSection = () => {
           </div>
 
           <TabsContent value="experience" className="animate-fade-in">
-            <div className="bg-white rounded-xl shadow-sm p-6 md:p-8">
+            <div className="glass-panel p-6 md:p-8">
               <div className="space-y-8">
                 {experience.map((item, index) => (
                   <div key={index} className="timeline-item">
                     <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
-                      <h3 className="text-xl font-semibold text-navy">
+                      <h3 className="text-xl font-semibold text-foreground">
                         {item.title}
                       </h3>
-                      <Badge variant="outline" className="w-fit">
+                      <Badge variant="outline" className="w-fit font-mono text-xs border-white/15">
                         {item.period}
                       </Badge>
                     </div>
@@ -37,7 +37,7 @@ const ExperienceSection = () => {
                       </span>
                     </div>
 
-                    <p className="text-gray-600 mt-2">{item.description}</p>
+                    <p className="text-muted-foreground mt-2">{item.description}</p>
                   </div>
                 ))}
               </div>
@@ -45,15 +45,15 @@ const ExperienceSection = () => {
           </TabsContent>
 
           <TabsContent value="education" className="animate-fade-in">
-            <div className="bg-white rounded-xl shadow-sm p-6 md:p-8">
+            <div className="glass-panel p-6 md:p-8">
               <div className="space-y-8">
                 {education.map((item, index) => (
                   <div key={index} className="timeline-item">
                     <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
-                      <h3 className="text-xl font-semibold text-navy">
+                      <h3 className="text-xl font-semibold text-foreground">
                         {item.degree}
                       </h3>
-                      <Badge variant="outline" className="w-fit">
+                      <Badge variant="outline" className="w-fit font-mono text-xs border-white/15">
                         {item.period}
                       </Badge>
                     </div>
@@ -65,7 +65,7 @@ const ExperienceSection = () => {
                       </span>
                     </div>
 
-                    <p className="text-gray-600 mt-2">{item.description}</p>
+                    <p className="text-muted-foreground mt-2">{item.description}</p>
                   </div>
                 ))}
               </div>

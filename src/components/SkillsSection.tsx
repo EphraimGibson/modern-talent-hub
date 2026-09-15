@@ -29,7 +29,7 @@ const SkillsSection = () => {
   }, []);
 
   return (
-    <section id="skills" className="bg-soft-gray/50 py-20" ref={sectionRef}>
+    <section id="skills" className="section-pattern pattern-diagonal bg-soft-gray/50 py-20" ref={sectionRef}>
       <div className="section-container">
         <h2 className="section-title">Skills & Expertise</h2>
 
@@ -49,10 +49,10 @@ const SkillsSection = () => {
               >
                 <CardContent className="p-6">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="bg-accent-green/20 p-2 rounded-md">
+                    <div className="bg-accent-green/15 p-2 rounded-md">
                       <skill.icon className="h-5 w-5 text-accent-green" />
                     </div>
-                    <h3 className="font-semibold text-lg text-navy">
+                    <h3 className="font-semibold text-lg text-foreground">
                       {skill.name}
                     </h3>
                   </div>
@@ -69,7 +69,7 @@ const SkillsSection = () => {
                     ></div>
                   </div>
 
-                  <div className="flex justify-between mt-2 text-sm text-gray-600">
+                  <div className="flex justify-between mt-2 text-sm font-mono text-muted-foreground">
                     <span>Proficiency</span>
                     <span>{skill.level}%</span>
                   </div>
@@ -79,8 +79,8 @@ const SkillsSection = () => {
           })}
         </div>
 
-        <div className="mt-16 bg-white rounded-xl shadow-md p-8 animate-fade-in">
-          <h3 className="text-2xl font-semibold text-center mb-6 text-navy">
+        <div className="mt-16 glass-panel p-8 animate-fade-in">
+          <h3 className="text-2xl font-semibold text-center mb-6 text-foreground">
             Other Technical Skills
           </h3>
 
@@ -101,7 +101,7 @@ const SkillsSection = () => {
             ].map((skill) => (
               <span
                 key={skill}
-                className="px-4 py-2 bg-soft-green rounded-full font-medium text-sm text-accent-green"
+                className="px-4 py-2 bg-white/5 border border-white/10 rounded-full font-mono font-medium text-sm text-accent-green"
               >
                 {skill}
               </span>

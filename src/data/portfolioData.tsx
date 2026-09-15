@@ -35,17 +35,17 @@ export const personalInfo = {
 
 export const skills = [
   {
+    name: "Java",
+    level: 90,
+    icon: Star,
+  },
+  {
     name: "React",
     level: 70,
     icon: Code,
   },
   {
     name: "TypeScript",
-    level: 75,
-    icon: Code,
-  },
-  {
-    name: "JavaScript",
     level: 75,
     icon: Code,
   },
@@ -60,20 +60,15 @@ export const skills = [
     icon: Code,
   },
   {
-    name: "HTML/CSS",
+    name: "AWS",
     level: 85,
     icon: Code,
-  },
-  {
-    name: "Java",
-    level: 90,
-    icon: Star,
   },
 ];
 
 export const experience = [
   {
-    title: "Junior Java Full-stack Developer",
+    title: "Java Full-stack Developer",
     company: "HyPlus, Vilnius, LT",
     period: "August 2025 - Current",
     description:

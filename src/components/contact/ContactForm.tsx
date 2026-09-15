@@ -86,7 +86,7 @@ const ContactForm = () => {
         title: "Message Received!",
         description:
           "Thank you for reaching out. I'll respond to your message shortly.",
-        className: "bg-green-100 border-green-500 text-green-800",
+        className: "bg-background border-accent-green/40 text-foreground",
       });
 
       // Reset form
@@ -99,7 +99,7 @@ const ContactForm = () => {
         title: "Message Received!",
         description:
           "Thank you for reaching out. I'll respond to your message shortly.",
-        className: "bg-green-100 border-green-500 text-green-800",
+        className: "bg-background border-accent-green/40 text-foreground",
       });
 
       // Still reset the form to give the appearance of success
@@ -118,13 +118,13 @@ const ContactForm = () => {
             name="name"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-sm font-medium text-gray-700">
+                <FormLabel className="text-sm font-medium text-muted-foreground">
                   Your Name
                 </FormLabel>
                 <FormControl>
                   <Input
                     placeholder="John Doe"
-                    className="bg-white"
+                    className="bg-white/[0.03] border-white/10"
                     {...field}
                   />
                 </FormControl>
@@ -138,13 +138,13 @@ const ContactForm = () => {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-sm font-medium text-gray-700">
+                <FormLabel className="text-sm font-medium text-muted-foreground">
                   Your Email
                 </FormLabel>
                 <FormControl>
                   <Input
                     placeholder="john@example.com"
-                    className="bg-white"
+                    className="bg-white/[0.03] border-white/10"
                     {...field}
                   />
                 </FormControl>
@@ -159,13 +159,13 @@ const ContactForm = () => {
           name="subject"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-sm font-medium text-gray-700">
+              <FormLabel className="text-sm font-medium text-muted-foreground">
                 Subject
               </FormLabel>
               <FormControl>
                 <Input
                   placeholder="Project Inquiry"
-                  className="bg-white"
+                  className="bg-white/[0.03] border-white/10"
                   {...field}
                 />
               </FormControl>
@@ -179,13 +179,13 @@ const ContactForm = () => {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-sm font-medium text-gray-700">
+              <FormLabel className="text-sm font-medium text-muted-foreground">
                 Message
               </FormLabel>
               <FormControl>
                 <Textarea
                   placeholder="Hello, I would like to talk about..."
-                  className="resize-none h-40 bg-white"
+                  className="resize-none h-40 bg-white/[0.03] border-white/10"
                   {...field}
                 />
               </FormControl>
@@ -196,7 +196,7 @@ const ContactForm = () => {
 
         <Button
           type="submit"
-          className="bg-accent-green hover:bg-accent-green/90 w-full"
+          className="bg-accent-green hover:bg-accent-green/90 w-full shadow-[0_0_25px_-8px_rgba(59,130,246,0.7)]"
           disabled={isSubmitting}
         >
           {isSubmitting ? "Sending..." : "Send Message"}

@@ -30,7 +30,7 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section id="testimonials" className="bg-white py-20">
+    <section id="testimonials" className="section-pattern pattern-dots py-20">
       <div className="section-container">
         <h2 className="section-title">Client Testimonials</h2>
 
@@ -59,15 +59,15 @@ const TestimonialsSection = () => {
                     </div>
                   </div>
 
-                  <blockquote className="text-lg text-center text-gray-700 italic mb-6">
+                  <blockquote className="text-lg text-center text-foreground/80 italic mb-6">
                     "{testimonial.quote}"
                   </blockquote>
 
                   <div className="text-center">
-                    <p className="font-semibold text-navy">
+                    <p className="font-semibold text-foreground">
                       {testimonial.author}
                     </p>
-                    <p className="text-sm text-gray-600">{testimonial.title}</p>
+                    <p className="text-sm text-muted-foreground">{testimonial.title}</p>
                   </div>
                 </CardContent>
               </Card>
@@ -91,7 +91,7 @@ const TestimonialsSection = () => {
                 size="sm"
                 onClick={() => setActiveIndex(index)}
                 className={`w-2 h-2 p-0 rounded-full ${
-                  index === activeIndex ? "bg-accent-green" : "bg-gray-300"
+                  index === activeIndex ? "bg-accent-green" : "bg-white/20"
                 }`}
               />
             ))}

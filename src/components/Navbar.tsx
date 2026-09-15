@@ -42,13 +42,15 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white shadow-md py-2" : "bg-transparent py-4"
+        isScrolled
+          ? "bg-background/80 backdrop-blur-xl border-b border-white/10 py-2"
+          : "bg-transparent py-4"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <div className="flex-shrink-0">
-            <a href="#home" className="text-xl font-bold text-navy">
+            <a href="#home" className="text-xl font-bold text-foreground font-mono">
               Portfolio<span className="text-accent-green">.</span>
             </a>
           </div>
@@ -64,11 +66,7 @@ const Navbar = () => {
                     e.preventDefault();
                     scrollToSection(item.href);
                   }}
-                  className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                    isScrolled
-                      ? "text-navy hover:bg-soft-green hover:text-accent-green"
-                      : "text-navy hover:bg-navy/10 hover:text-accent-green"
-                  }`}
+                  className="px-3 py-2 text-sm font-medium rounded-md transition-colors text-foreground/80 hover:bg-white/5 hover:text-accent-green"
                 >
                   {item.name}
                 </a>
@@ -82,7 +80,7 @@ const Navbar = () => {
               variant="ghost"
               size="icon"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-navy"
+              className="text-foreground"
             >
               {mobileMenuOpen ? (
                 <X className="h-6 w-6" />
@@ -96,7 +94,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white shadow-lg">
+        <div className="md:hidden bg-background/95 backdrop-blur-xl border-t border-white/10">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navItems.map((item) => (
               <a
@@ -106,7 +104,7 @@ const Navbar = () => {
                   e.preventDefault();
                   scrollToSection(item.href);
                 }}
-                className="block px-3 py-2 text-base font-medium text-navy hover:bg-soft-green hover:text-accent-green rounded-md"
+                className="block px-3 py-2 text-base font-medium text-foreground/80 hover:bg-white/5 hover:text-accent-green rounded-md"
               >
                 {item.name}
               </a>
