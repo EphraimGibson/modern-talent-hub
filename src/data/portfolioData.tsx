@@ -17,7 +17,7 @@ export const personalInfo = {
   tagline: "Full-Stack Developer",
   email: "gibsonephraim9@gmail.com",
   location: "Vilnius, Lithuania",
-  bio: "I'm a full-stack developer with deep expertise in Java and backend systems, paired with modern frontend development using React and TypeScript. I build efficient, reliable solutions end-to-end, from robust backend architecture and data modeling to responsive, well-tested user interfaces. I care about writing clean, maintainable code and delivering software that holds up in production. I bring dedication, adaptability, and a genuine drive to deliver value on every project I touch.",
+  bio: "Full-stack developer specializing in Java and backend systems, with a modern React/TypeScript frontend. I build reliable, well-tested software end-to-end, and I care about writing code that holds up in production.",
   avatar: "/picture.png",
   socialLinks: [
     {
