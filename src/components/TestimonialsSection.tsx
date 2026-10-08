@@ -30,7 +30,7 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section id="testimonials" className="section-pattern pattern-dots py-20">
+    <section id="testimonials" className="py-20">
       <div className="section-container">
         <h2 className="section-title">Client Testimonials</h2>
 

@@ -8,7 +8,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="section-pattern pattern-grid bg-navy text-white py-10 border-t border-white/10">
+    <footer className="text-white py-10 border-t border-white/10">
       <div className="section-container">
         <div className="flex flex-col items-center">
           <Button

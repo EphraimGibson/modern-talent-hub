@@ -14,14 +14,8 @@ const HeroSection = () => {
   return (
     <section 
       id="home" 
-      className="min-h-screen flex flex-col justify-center relative overflow-hidden bg-background pt-16"
+      className="min-h-screen flex flex-col justify-center relative overflow-hidden pt-16"
     >
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.025)_1px,transparent_1px)] bg-[size:56px_56px]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_20%,rgba(59,130,246,0.22)_0%,rgba(0,0,0,0)_45%)]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_75%,rgba(59,130,246,0.18)_0%,rgba(0,0,0,0)_45%)]"></div>
-      </div>
-      
       <div className="section-container z-10 flex flex-col md:flex-row items-center gap-8 md:gap-16">
         <div className="flex-1">
           <div className="mb-4">

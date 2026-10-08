@@ -4,7 +4,7 @@ import ContactInfo from "./ContactInfo";
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="section-pattern pattern-grid bg-soft-gray/50 py-20">
+    <section id="contact" className="py-20">
       <div className="section-container">
         <h2 className="section-title">Get In Touch</h2>
 

@@ -17,7 +17,7 @@ const ProjectsSection = () => {
     : projects;
 
   return (
-    <section id="projects" className="section-pattern pattern-diagonal bg-soft-gray/50 py-20">
+    <section id="projects" className="py-20">
       <div className="section-container">
         <h2 className="section-title">My Projects</h2>
 

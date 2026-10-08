@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="section-pattern pattern-dots py-20">
+    <section id="about" className="py-20">
       <div className="section-container">
         <h2 className="section-title">About Me</h2>
 

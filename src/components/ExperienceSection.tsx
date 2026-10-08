@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 
 const ExperienceSection = () => {
   return (
-    <section id="experience" className="section-pattern pattern-diagonal bg-soft-gray/50 py-20">
+    <section id="experience" className="py-20">
       <div className="section-container">
         <h2 className="section-title">Experience & Education</h2>
 

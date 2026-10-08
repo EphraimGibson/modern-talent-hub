@@ -44,7 +44,7 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply text-foreground font-sans;
     scroll-behavior: smooth;
   }
 
@@ -59,46 +59,15 @@
 }
 
 @layer components {
-  .section-pattern {
-    @apply relative overflow-hidden isolate;
-  }
-
-  .section-pattern::before {
-    content: "";
-    @apply absolute inset-0 pointer-events-none opacity-60;
-  }
-
-  .section-pattern > * {
-    @apply relative z-10;
-  }
-
-  .pattern-grid::before {
-    background-image: linear-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
-    background-size: 36px 36px;
-  }
-
-  .pattern-dots::before {
-    background-image: radial-gradient(rgba(96, 165, 250, 0.18) 1.2px, transparent 1.2px);
-    background-size: 22px 22px;
-    background-position: center;
-  }
-
-  .pattern-diagonal::before {
-    background-image: linear-gradient(135deg, rgba(96, 165, 250, 0.08) 0%, rgba(96, 165, 250, 0.08) 10%, transparent 10%, transparent 50%, rgba(96, 165, 250, 0.08) 50%, rgba(96, 165, 250, 0.08) 60%, transparent 60%, transparent 100%);
-    background-size: 28px 28px;
-  }
-
-  .pattern-radial::before {
-    background:
-      radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.12), transparent 30%),
-      radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.08), transparent 28%);
-  }
-
-  .pattern-circles::before {
-    background-image: radial-gradient(rgba(148, 163, 184, 0.08) 1.4px, transparent 1.4px);
-    background-size: 28px 28px;
-    background-position: center;
+  .site-wallpaper {
+    background-color: hsl(var(--background));
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+      radial-gradient(circle at 25% 20%, rgba(59, 130, 246, 0.22) 0%, rgba(0, 0, 0, 0) 45%),
+      radial-gradient(circle at 75% 75%, rgba(59, 130, 246, 0.18) 0%, rgba(0, 0, 0, 0) 45%);
+    background-size: 56px 56px, 56px 56px, auto, auto;
+    background-attachment: fixed;
   }
 
   .section-container {

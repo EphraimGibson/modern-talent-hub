@@ -29,7 +29,7 @@ const SkillsSection = () => {
   }, []);
 
   return (
-    <section id="skills" className="section-pattern pattern-diagonal bg-soft-gray/50 py-20" ref={sectionRef}>
+    <section id="skills" className="py-20" ref={sectionRef}>
       <div className="section-container">
         <h2 className="section-title">Skills & Expertise</h2>
 

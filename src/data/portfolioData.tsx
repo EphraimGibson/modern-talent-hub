@@ -76,7 +76,7 @@ export const experience = [
     icon: Briefcase,
   },
   {
-    title: "Customer service representative ",
+    title: "Technical Support ",
     company: "Teleperformance LT",
     period: "2024 - 2025",
     description:
