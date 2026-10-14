@@ -17,7 +17,7 @@ export const personalInfo = {
   tagline: "Full-Stack Developer",
   email: "gibsonephraim9@gmail.com",
   location: "Vilnius, Lithuania",
-  bio: "Full-stack developer specializing in Java and backend systems, with a modern React/TypeScript frontend. I build reliable, well-tested software end-to-end, and I care about writing code that holds up in production.",
+  bio: "Software engineer specializing in Java and backend systems, with a modern React/TypeScript frontend. I build reliable, well-tested software end-to-end, and I care about writing code that holds up in production.",
   avatar: "/picture.png",
   socialLinks: [
     {
